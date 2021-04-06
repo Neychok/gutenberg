@@ -227,7 +227,7 @@ class WP_Theme_JSON_Resolver {
 			return self::$core;
 		}
 
-		$all_blocks = WP_Theme_JSON::ALL_BLOCKS_NAME;
+		$all_blocks = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 		$config     = self::read_json_file( __DIR__ . '/experimental-default-theme.json' );
 		$config     = self::translate( $config );
 

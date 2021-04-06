@@ -41,7 +41,7 @@ class Theme_JSON_Legacy_Settings_Test extends WP_UnitTestCase {
 	}
 
 	function test_legacy_settings_blank() {
-		$all_blocks = WP_Theme_JSON::ALL_BLOCKS_NAME;
+		$all_blocks = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 		$input      = array();
 		$expected   = array(
 			'settings' => array(
@@ -55,7 +55,7 @@ class Theme_JSON_Legacy_Settings_Test extends WP_UnitTestCase {
 	}
 
 	function test_legacy_settings_no_theme_support() {
-		$all_blocks = WP_Theme_JSON::ALL_BLOCKS_NAME;
+		$all_blocks = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 		$input      = $this->get_editor_settings_no_theme_support();
 		$expected   = array(
 			'settings' => array(
@@ -81,7 +81,7 @@ class Theme_JSON_Legacy_Settings_Test extends WP_UnitTestCase {
 	}
 
 	function test_legacy_settings_custom_units_can_be_disabled() {
-		$all_blocks = WP_Theme_JSON::ALL_BLOCKS_NAME;
+		$all_blocks = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 		add_theme_support( 'custom-units', array() );
 		$input = gutenberg_get_common_block_editor_settings();
 
@@ -96,7 +96,7 @@ class Theme_JSON_Legacy_Settings_Test extends WP_UnitTestCase {
 	}
 
 	function test_legacy_settings_custom_units_can_be_enabled() {
-		$all_blocks = WP_Theme_JSON::ALL_BLOCKS_NAME;
+		$all_blocks = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 		add_theme_support( 'custom-units' );
 		$input = gutenberg_get_common_block_editor_settings();
 
@@ -111,7 +111,7 @@ class Theme_JSON_Legacy_Settings_Test extends WP_UnitTestCase {
 	}
 
 	function test_legacy_settings_custom_units_can_be_filtered() {
-		$all_blocks = WP_Theme_JSON::ALL_BLOCKS_NAME;
+		$all_blocks = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 		add_theme_support( 'custom-units', 'rem', 'em' );
 		$input = gutenberg_get_common_block_editor_settings();
 
@@ -126,7 +126,7 @@ class Theme_JSON_Legacy_Settings_Test extends WP_UnitTestCase {
 	}
 
 	function test_legacy_settings_filled() {
-		$all_blocks = WP_Theme_JSON::ALL_BLOCKS_NAME;
+		$all_blocks = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 		$input      = array(
 			'disableCustomColors'    => true,
 			'disableCustomGradients' => true,

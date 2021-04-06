@@ -13,7 +13,7 @@
  * @return array Config that adheres to the theme.json schema.
  */
 function gutenberg_experimental_global_styles_get_theme_support_settings( $settings ) {
-	$all_blocks                                = WP_Theme_JSON::ALL_BLOCKS_NAME;
+	$all_blocks                                = WP_Theme_JSON_Schema_V0::ALL_BLOCKS_NAME;
 	$theme_settings                            = array();
 	$theme_settings['settings']                = array();
 	$theme_settings['settings'][ $all_blocks ] = array();
